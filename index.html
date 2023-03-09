@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title>기본 레이아웃</title>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/mj_base_ui.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" ></script>
+    
+    <script src="js/layout.js"></script>
+    <script src="js/basic.js"></script> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+
+</head>
+<body id="main" >  
+    <header id="gs_layout_header">
+        <div class="inner">
+            <div class="gs_top_logo">
+                <a href="/"><img src="img/logo.png"/></a>
+            </div>
+            <ul class="gs_top_cate">
+                <li><a href="/"><span>회사소개</span></a></li>
+                <li><a href="/"><span>기업자금</span></a></li>
+                <li><a href="/"><span>기업회생</span></a></li>
+                <li><a href="/"><span>법인컨설팅</span></a></li>
+                <li><a href="/"><span>문의하기</span></a></li>
+                <li><a href="/"><span>공지사항</span></a></li>
+                <span class="gs_top_bar">　</span>
+            </ul>
+            <div class="gs_top_login">
+                <div class="gs_login _on" style="display:none;"> 
+                    <a href="/">LOOUT</a>
+                </div>
+                <div class="gs_login _off">
+                    <a href="/">JOIN</a>
+                    <a href="/">LOGIN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="gs_content">
+        <div class="gs_main_box_1">
+            <div class="inner">
+                <div class="gs_main_curver"></div>
+                <div class="gs_main_img"><img src="img/main_img_3.jpg"></div>
+                <div class="gs_main_content">
+                    <h1>한걸음 기업성장을 위한<br/>토탈 금융지원 서비스</h1>
+                    <p>기업의 성장과 성공의 기반이 되어 드리겠습니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gs_main_box_2">
+            <div id="gs_tab_btn">
+                <ul class="inner">
+                    <li class="gs_button _1 select"><span>기업교육</span></li> 
+                    <li class="gs_button _2"><span>기업자금</span></li>
+                    <li class="gs_button _3"><span>기업회생</span></li>
+                    <li class="gs_button _4"><span>법인컨설팅</span></li>
+                </ul>
+            </div>
+            
+            <ul id="gs_tab_box">
+                <li class="gs_box _1 select">
+                    <div class="inner">
+                        <h1>business<br/>education</h1>
+                        <div class="gs_tab_con_wrap">
+                            <span class="gs_tab_con_list">소상공인 업종별 기업교육</span>
+                            <span class="gs_tab_con_list">소상공인을 위한 업종별 전문기술 교육비지원!</span>
+                            <span class="gs_tab_con_list">경영 개선교육, 전용 교육장제공</span>
+                        </div>
+                    </div>
+                </li> 
+                <li class="gs_box _2">
+                    <div class="inner">
+                        <h1>business<br/>Funding</h1>
+                        <div class="gs_tab_con_wrap">
+                            <span class="gs_tab_con_list">합리적인 분야 별 기업자금</span>
+                            <span class="gs_tab_con_list">소상공인의 분야를 정확히 진단 및 자금 조달!</span>
+                            <span class="gs_tab_con_list">정확한 진단, 기업에 알맞는 자금조달</span>
+                        </div>
+                    </div>
+                </li> 
+                <li class="gs_box _3">
+                    <div class="inner">
+                        <h1>business<br/>rehabilitation</h1>
+                        <div class="gs_tab_con_wrap">
+                            <span class="gs_tab_con_list">전문적인 기업회생  </span>
+                            <span class="gs_tab_con_list">신용전문가의 채무조정 상담·솔루션! </span>
+                            <span class="gs_tab_con_list">분야별 전문가를 통한 1:1 컨설팅 </span>
+                        </div>
+                    </div>
+                </li> 
+                <li class="gs_box _4">
+                    <div class="inner">
+                        <h1>Corporate<br/>Consulting</h1>
+                        <div class="gs_tab_con_wrap">
+                            <span class="gs_tab_con_list">특허, 법률, 세무 등 전문기술 컨설팅 </span>
+                            <span class="gs_tab_con_list">법인 전문가와의 복잡한 법적 문제 해결!</span>
+                            <span class="gs_tab_con_list">마케팅, 영업홍보 , 직원관리</span>
+                        </div>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+        <div class="gs_main_box_3">
+            <div class="inner">
+                <div class="title">
+                    <h2>지원사례</h2>
+                    <p>최적의 시스템과 노하우를 직접 경험하신 기업의 승인사례입니다.</p>
+                </div>
+                <ul class="list">
+                    <li class="gs_ex_box">
+                        <div class="gs_ex_box_left">
+                            <span class="img"><img src="img/Ellipse_10.png"></span>
+                            <div class="name">
+                                <h4>오피스리더</h4>
+                                <p>[ 건설 ]</p>
+                            </div> 
+                        </div>
+                        <div class="gs_ex_box_right">
+                            <div class="sales"><span class="year">5년</span><span class="price">10억</span></div>
+                            <div class="detail">
+                                해당업종 20년 경력<br/>
+                                직접 기관방문 5천승인/ 한도 안맞아 취소<br/>
+                                은행 부결
+                            </div>
+                            <div class="service">18년5월 컨설팅의뢰<br/>
+                                업종 변경 및 보완</div>
+                        </div>
+                    </li>
+                    <li class="gs_ex_box">
+                        <div class="gs_ex_box_left">
+                            <span class="img"><img src="img/Ellipse_10.png"></span>
+                            <div class="name">
+                                <h4>오피스리더</h4>
+                                <p>[ 건설 ]</p>
+                            </div> 
+                        </div>
+                        <div class="gs_ex_box_right">
+                            <div class="sales"><span class="year">5년</span><span class="price">10억</span></div>
+                            <div class="detail">
+                                해당업종 20년 경력<br/>
+                                직접 기관방문 5천승인/ 한도 안맞아 취소<br/>
+                                은행 부결
+                            </div>
+                            <div class="service">18년5월 컨설팅의뢰<br/>
+                                업종 변경 및 보완</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gs_gs_main_box_4">
+            <div class="inner">
+                <div class="gs_Voucher_title">
+                    <h2>지원바우처</h2>
+                </div>
+                <ul class="gs_Voucher_list">
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                    <li><a href=""><img src="img/Rectangle_50.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="gs_layout_footer">
+        <div class="inner">
+            <div class="gs_footer_logo">
+                <a href="/"><img src="img/logo_w.png"/></a>
+            </div>
+            <div class="gs_footer_detail">
+                <ul>
+                    <li><span>대표: 홍길동</span></li>
+                    <li><span>사업자등록번호 : 000-00-00000</span></li><br/>
+                    <li><span>주소 : 서울시 영등포구</span></li><br/>
+                    <li><span>이메일: 000000@gmail.com</span></li>
+                    <li><span>TEL : 02- 000 - 0000</span></li>
+                    <li><span>FAX : 02 - 000 - 0000</span></li>
+                </ul>
+                <div class="gs_footer_copyright">
+                    <span>copyright 로고. All right RESERVED.</span>
+                </div>
+            </div>
+            <ul class="gs_footer_util">
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

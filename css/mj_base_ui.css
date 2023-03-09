@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+
+
+:root {
+  --main_color_1: #FFC500; /*  var(--main_color_1) */
+  --main_color_2: #2F2C37; /*  var(--main_color_2) */
+  --sub_color_3: #C4C4C4; /*  var(--sub_color_3) */
+  --sub_color_4: #F4F4F4; /*  var(--sub_color_4) */
+  --sub_color_5:  #F8F8F8; /*  var(--sub_color_5) */
+
+  --width_: 1280px; /*  var(--width_) */
+  --font_: 15px; /*  var(--font_) */
+}
+
+
+/* font style */
+body,code { font-weight:300; font-size: 15px; }
+h1 { font-size:54px; text-transform:uppercase; }
+h2 { font-size:40px; text-transform:uppercase; }
+h3 { font-size:32px; text-transform:uppercase; }
+h4 { font-size:20px; text-transform:uppercase; }
+
+.gs_font_l { font-weight:100; font-size: 15px;}
+
+.gs_font_s { font-size: 18px; }
+.gs_font_bold {  font-weight:700;  font-size: 24px; }
+.gs_font_cation { font-size: 12px; }
