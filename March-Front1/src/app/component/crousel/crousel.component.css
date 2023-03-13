@@ -1,0 +1,9 @@
+.imgBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  padding-top: 10px;
+}
