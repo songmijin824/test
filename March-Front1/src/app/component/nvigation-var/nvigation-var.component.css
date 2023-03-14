@@ -79,12 +79,13 @@
 }
 #gs_layout_header .gs_top_login .gs_login a {
   display: inline-block;
-  background-color: #c4c4c4;
+  background-color: beige;
   margin-left: 5px;
   border-radius: 50px;
   padding: 7px 25px;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
 }
 #gs_layout_header .gs_top_login .gs_login a:last-child {
   background-color: #ffc500;

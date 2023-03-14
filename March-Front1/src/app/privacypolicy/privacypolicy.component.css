@@ -1,0 +1,27 @@
+.tosMain {
+  margin-left: 240px;
+}
+.textArticle {
+  display: flex;
+  flex-direction: column;
+  left: -20%;
+}
+
+.textTitle {
+  font-weight: 400;
+  font-size: 18px;
+  height: 26px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.textcontents {
+  min-height: fit-content;
+  min-width: fit-content;
+  font-weight: 300;
+  font-size: 12px;
+  color: #2f2c37;
+}
+
+.lines {
+  border: 1px solid #f4f4f4;
+}

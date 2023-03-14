@@ -17,6 +17,9 @@ import { FooterComponent } from './component/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CrouselComponent } from './component/crousel/crousel.component';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
+import { JoinusComponent } from './page/joinus/joinus.component';
+import { TOSComponent } from './page/tos/tos.component';
+import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,9 @@ import { ModalLoginComponent } from './modal-login/modal-login.component';
     LoginFormComponent,
     FooterComponent,
     ModalLoginComponent,
+    JoinusComponent,
+    TOSComponent,
+    PrivacypolicyComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
