@@ -10,6 +10,18 @@ export class ModalLoginComponent {
   @Output() isLoginBtnChanged = new EventEmitter<boolean>();
   isLoginBtn: boolean = false;
 
+  takeId: string = '';
+  takePw: string = '';
+
+  takeIdFn(e: any) {
+    return (this.takeId = e.target.value);
+  }
+  takePwFn(e: any) {
+    return (this.takePw = e.target.value);
+  }
+  close() {
+    return this.isLoginBtnChanged.emit(this.isLoginBtn);
+  }
   loginFn() {
     //비동기 api호출문
     // const ayncValue = {

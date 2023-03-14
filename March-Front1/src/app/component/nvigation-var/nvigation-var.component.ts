@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { ModalLoginComponent } from 'src/app/modal-login/modal-login.component';
 
 @Component({
@@ -6,7 +6,12 @@ import { ModalLoginComponent } from 'src/app/modal-login/modal-login.component';
   templateUrl: './nvigation-var.component.html',
   styleUrls: ['./nvigation-var.component.css'],
 })
-export class NvigationVarComponent {
+export class NvigationVarComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    this.myDialog.nativeElement.showModal();
+  }
+  @ViewChild('myDialog') myDialog: any;
+
   navArr: navBarObj[] = [
     { path: 'index', text: '회사소개' },
     { path: 'education', text: '기업교육' },
@@ -18,10 +23,13 @@ export class NvigationVarComponent {
   ];
 
   isLoginBtn = false;
-
-  toggleLogin(input: boolean) {
-    this.isLoginBtn = true;
+  openDialog() {
+    this.myDialog.nativeElement.showModal();
+  }
+  toggleLogin() {
+    console.log('click');
     console.log(this.isLoginBtn);
+    return (this.isLoginBtn = true);
   }
 
   handleIsLoginBtnChanged(isLoginBtn: boolean) {

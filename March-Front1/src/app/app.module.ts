@@ -12,7 +12,6 @@ import { DoorComponent } from './page/door/door.component';
 import { NoticeComponent } from './page/notice/notice.component';
 import { LoginpComponent } from './page/loginp/loginp.component';
 import { NvigationVarComponent } from './component/nvigation-var/nvigation-var.component';
-import { LoginFormComponent } from './component/login-form/login-form.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CrouselComponent } from './component/crousel/crousel.component';
@@ -32,7 +31,6 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
     NoticeComponent,
     LoginpComponent,
     NvigationVarComponent,
-    LoginFormComponent,
     FooterComponent,
     ModalLoginComponent,
     JoinusComponent,
