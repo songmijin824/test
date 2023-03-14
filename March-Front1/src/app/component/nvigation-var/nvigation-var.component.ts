@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalLoginComponent } from 'src/app/modal-login/modal-login.component';
 
 @Component({
   selector: 'app-nvigation-var',
@@ -15,6 +16,18 @@ export class NvigationVarComponent {
     { path: 'door', text: '문의하기' },
     { path: 'notice', text: '공지사항' },
   ];
+
+  isLoginBtn = false;
+
+  toggleLogin(input: boolean) {
+    this.isLoginBtn = true;
+    console.log(this.isLoginBtn);
+  }
+
+  handleIsLoginBtnChanged(isLoginBtn: boolean) {
+    this.isLoginBtn = isLoginBtn;
+    console.log(this.isLoginBtn);
+  }
 }
 
 interface navBarObj {

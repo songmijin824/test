@@ -215,7 +215,23 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+.moveBtn {
+  background-color: white;
+  width: 37px;
+  height: 37px;
+  border-color: #c3c3c3;
+  font-size: 30px;
+  color: #c3c3c3;
+}
+.btnBox {
+  height: fit-content;
+  display: flex;
+  position: relative;
+}
+.moveBtn {
+  width: 43px;
+  height: 43px;
+}
 .carouselContainer .title {
   margin-bottom: 30px;
 }

@@ -14,8 +14,11 @@
             </div>
             <div class="gs_login _off">
                 <!-- <a href="/">JOIN</a> -->
-                <a href="/">LOGIN</a>
+                <a (click)="toggleLogin(true)">LOGIN</a>
             </div>
         </div>
+    </div>
+    <div *ngIf="isLoginBtn">
+        <app-modal-login></app-modal-login>
     </div>
 </header>

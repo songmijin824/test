@@ -16,6 +16,7 @@ import { LoginFormComponent } from './component/login-form/login-form.component'
 import { FooterComponent } from './component/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CrouselComponent } from './component/crousel/crousel.component';
+import { ModalLoginComponent } from './modal-login/modal-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { CrouselComponent } from './component/crousel/crousel.component';
     NvigationVarComponent,
     LoginFormComponent,
     FooterComponent,
+    ModalLoginComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

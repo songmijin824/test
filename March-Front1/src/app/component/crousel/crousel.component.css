@@ -1,9 +1,23 @@
+.box {
+  margin: 10px auto;
+}
 .imgBox {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
-.box {
-  padding-top: 10px;
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crouselSpan {
+  margin-left: 47%;
 }
