@@ -8,15 +8,15 @@
   border-right: none;
   border-bottom: none;
 }
-
+.hidden {
+  display: none;
+}
 .closeBox {
-  position: absolute;
+  /* position: absolute; */
+  position: block;
   background-color: black;
   color: white;
-  z-index: 11;
-  top: -28px;
   font-size: 21px;
-  right: -0.5%;
   width: 30px;
   height: 25px;
 }
@@ -65,4 +65,10 @@
   background-color: white;
   border: none;
   font-size: 18px;
+}
+
+.closeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }

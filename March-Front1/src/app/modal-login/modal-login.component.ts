@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+  OnInit,
+} from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -7,7 +15,15 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./modal-login.component.css'],
 })
 export class ModalLoginComponent {
-  @Output() isLoginBtnChanged = new EventEmitter<boolean>();
+  @Input() isHidden: boolean = true;
+
+  show(): void {
+    this.isHidden = false;
+  }
+
+  hide(): void {
+    this.isHidden = true;
+  }
   isLoginBtn: boolean = false;
 
   takeId: string = '';
@@ -18,9 +34,6 @@ export class ModalLoginComponent {
   }
   takePwFn(e: any) {
     return (this.takePw = e.target.value);
-  }
-  close() {
-    return this.isLoginBtnChanged.emit(this.isLoginBtn);
   }
   loginFn() {
     //비동기 api호출문
@@ -45,6 +58,6 @@ export class ModalLoginComponent {
     // }
 
     // 로그인되면 상태 변경 후 닫기
-    return this.isLoginBtnChanged.emit(this.isLoginBtn);
+    return (this.isHidden = true);
   }
 }

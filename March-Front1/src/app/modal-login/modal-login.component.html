@@ -1,6 +1,10 @@
-<dialog open class="dialogBox" #myDialog>
-    <div class="closeBox" (click)="myDialog.close()">X</div>
+<dialog open class="dialogBox" open class="dialogBox" [ngClass]="{ hidden: isHidden }">
+
     <div class="LoginBox">
+        <div class="closeContainer" (click)="hide()">
+            <div class="closeBox">X</div>
+        </div>
+
         <span class="loginSpan">LOGIN</span>
         <article class="inputBox">
             <input (change)="takeIdFn($event)" class="inputElement" type="text" placeholder="   ID">
@@ -9,8 +13,9 @@
         </article>
 
         <form method="dialog">
-            <button class="loginBtn" (click)="myDialog.close()">LOGIN</button>
+            <button class="loginBtn" (click)="hide()">LOGIN</button>
         </form>
         <button class="forgetBtn">Forget password?</button>
     </div>
+
 </dialog>

@@ -45,6 +45,7 @@
   vertical-align: bottom;
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 /* ul.gs_top_cate margin top , bottom 0 으로 변경  */
@@ -77,19 +78,14 @@
   top: 10px;
   right: 0;
 }
-#gs_layout_header .gs_top_login .gs_login a {
-  display: inline-block;
-  background-color: beige;
+
+#gs_layout_header .gs_top_login .gs_login button {
+  background-color: #ffc500;
   margin-left: 5px;
   border-radius: 50px;
   padding: 7px 25px;
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;
-}
-#gs_layout_header .gs_top_login .gs_login a:last-child {
-  background-color: #ffc500;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  border: none;
 }

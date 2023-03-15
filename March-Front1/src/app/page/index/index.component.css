@@ -247,6 +247,8 @@ body {
   font-size: 0;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0;
 }
 .gs_main_box_3 .carouselContainer ul.list li {
   width: 49%;
@@ -260,6 +262,10 @@ body {
 }
 .gs_ex_box {
   display: inline-block;
+}
+.gs_main_box_3 ul.ex_list .gs_ex_box {
+  box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f4f4f4;
 }
 .gs_ex_box_left {
   width: 165px;

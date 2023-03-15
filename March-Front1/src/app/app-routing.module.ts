@@ -9,18 +9,19 @@ import { NoticeComponent } from './page/notice/notice.component';
 import { RestructureComponent } from './page/restructure/restructure.component';
 import { JoinusComponent } from './page/joinus/joinus.component';
 import { TOSComponent } from './page/tos/tos.component';
-import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import { PrivacypolicyComponent } from './page/privacypolicy/privacypolicy.component';
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent, pathMatch: 'full' },
   { path: 'education', component: EducationComponent, pathMatch: 'full' },
   { path: 'finance', component: FinanceComponent, pathMatch: 'full' },
-  { path: 'Restructure', component: RestructureComponent, pathMatch: 'full' },
+  { path: 'restructure', component: RestructureComponent, pathMatch: 'full' },
   { path: 'consultant', component: ConsultantComponent, pathMatch: 'full' },
   { path: 'door', component: DoorComponent, pathMatch: 'full' },
   { path: 'notice', component: NoticeComponent, pathMatch: 'full' },
   { path: 'joinus', component: JoinusComponent, pathMatch: 'full' },
   { path: 'tos', component: TOSComponent, pathMatch: 'full' },
+
   {
     path: 'privacypolicy',
     component: PrivacypolicyComponent,

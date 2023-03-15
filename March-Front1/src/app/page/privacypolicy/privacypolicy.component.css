@@ -40,7 +40,6 @@ article {
   font-size: 18px;
   height: 26px;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .textcontents {
   min-height: fit-content;
@@ -48,6 +47,7 @@ article {
   font-weight: 300;
   font-size: 12px;
   color: #2f2c37;
+  margin-bottom: 20px;
 }
 
 .lines {

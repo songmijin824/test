@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './page/index/index.component';
@@ -18,7 +18,7 @@ import { CrouselComponent } from './component/crousel/crousel.component';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { JoinusComponent } from './page/joinus/joinus.component';
 import { TOSComponent } from './page/tos/tos.component';
-import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import { PrivacypolicyComponent } from './page/privacypolicy/privacypolicy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +42,7 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
     AppRoutingModule,
     NgbModule,
     CrouselComponent,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

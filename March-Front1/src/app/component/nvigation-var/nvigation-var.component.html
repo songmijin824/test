@@ -13,12 +13,12 @@
                 <a href="/">LOOUT</a>
             </div>
             <div class="gs_login _off">
-                <span class="jointag" routerLink="joinus">JOIN</span>
-                <a (click)="openDialog()">LOGIN</a>
+                <!-- <span class="jointag" routerLink="joinus">JOIN</span> -->
+                <button (click)="toggleLogin()"><a>LOGIN</a></button>
             </div>
         </div>
     </div>
 
-    <app-modal-login *ngIf="isLoginBtn"></app-modal-login>
+    <app-modal-login [isHidden]="isLoginBtn"></app-modal-login>
 
 </header>

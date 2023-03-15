@@ -8,21 +8,21 @@ import { Component } from '@angular/core';
 })
 export class NoticeComponent {
   ngOnInit() {
-    try {
-      this.getData().subscribe((res: any) => {
-        this.temp1 = JSON.parse(res.sqltemp).slice(10);
-        console.log(this.temp1);
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   this.getData().subscribe((res: any) => {
+    //     this.temp1 = JSON.parse(res.sqltemp).slice(10);
+    //     console.log(this.temp1);
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
   constructor(private http: HttpClient) {}
-  getData() {
-    return this.http.post('https://kwakdeayang.shop/productInfo/mouse/1', {
-      tags: ['blue'],
-    });
-  }
+  // getData() {
+  //   return this.http.post('https://kwakdeayang.shop/productInfo/mouse/1', {
+  //     tags: ['blue'],
+  //   });
+  // }
   myarr = [];
   temp1: any[] | undefined;
 }
