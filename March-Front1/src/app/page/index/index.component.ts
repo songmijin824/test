@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+  Renderer2,
+} from '@angular/core';
 import {
   NgbCarousel,
   NgbCarouselModule,
@@ -10,17 +17,77 @@ import {
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent {
   @ViewChild('carousel', { static: true })
+  @ViewChildren('tabBox')
+  LiList!: QueryList<ElementRef>;
+  @ViewChildren('divsBox')
+  divBox!: QueryList<ElementRef>;
   carousel!: NgbCarousel;
 
-  ngOnInit() {
-    this.carousel.activeId = '1';
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterViewInit() {
+    // 초기 설정
+    // QueryList 객체의 변경을 감지하여 처리
+    this.LiList.changes.subscribe((items) => {
+      items.forEach((item: any) => {
+        if (!item.nativeElement.className.includes('select')) {
+          this.renderer.removeClass(item.nativeElement, 'select');
+        }
+      });
+    });
+    this.divBox.changes.subscribe((items) => {
+      items.forEach((item: any) => {
+        if (!item.nativeElement.className.includes('select')) {
+          this.renderer.removeClass(item.nativeElement, 'select');
+        }
+      });
+    });
   }
+  selectTab($event: Event) {
+    const regex = /[^0-9]/g;
+    let target = ($event.target as HTMLElement).className;
 
-  //나중엔 데이터 랜덤 6개 정도를 받아서 OnInit으로 이런 배열에 집어 넣을거임.
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+    let numberof = target.replace(regex, '');
 
+    this.LiList?.forEach((item) => {
+      const element: string = item.nativeElement.className;
+      if (!(element === target)) {
+        const temp = element;
+        if (item.nativeElement.classList.value.includes('select')) {
+          item.nativeElement.classList.value = temp.replaceAll('select', '');
+        }
+      }
+      if (element === target) {
+        const temp = element;
+        if (item.nativeElement.classList.value.includes('select')) {
+          item.nativeElement.classList.value = temp.replaceAll('select', '');
+        }
+        item.nativeElement.className = element + ' select';
+      }
+      $event.stopPropagation();
+    });
+    console.log(numberof);
+    this.divBox?.forEach((item) => {
+      const element2: string = item.nativeElement.className;
+
+      if (
+        !item.nativeElement.className.includes(numberof) &&
+        item.nativeElement.className.includes('select')
+      ) {
+        const temp = element2;
+        item.nativeElement.classList.value = temp.replace('select', '');
+      }
+      if (
+        item.nativeElement.className.includes(numberof) &&
+        !item.nativeElement.className.includes('select')
+      ) {
+        item.nativeElement.className = element2 + ' select';
+      }
+      $event.stopPropagation();
+    });
+  }
   carouselData = [
     {
       first: {
@@ -114,6 +181,41 @@ export class IndexComponent implements OnInit {
     ) {
       this.togglePaused();
     }
+  }
+
+  cname = '';
+  mname = '';
+  phone = '';
+  email = '';
+
+  inputCname($event: any) {
+    this.cname = $event.target.value;
+  }
+  Mname($event: any) {
+    this.mname = $event.target.value;
+  }
+  inputPhone($event: any) {
+    this.phone = $event.target.value;
+  }
+  inputEmail($event: any) {
+    this.email = $event.target.value;
+  }
+  tags: string[] = [];
+  ischeckBtn($event: any) {
+    let tag = $event.target.id;
+
+    if ($event.currentTarget.checked) {
+      if (!this.tags.includes(tag)) {
+        this.tags.push(tag);
+      } else return;
+    }
+    if (!$event.currentTarget.checked) {
+      if (this.tags.includes(tag)) {
+        const location = this.tags.indexOf(tag);
+        this.tags.splice(location, 1);
+      } else return;
+    }
+    console.log(this.tags);
   }
 }
 

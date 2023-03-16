@@ -9,13 +9,21 @@
             </div>
         </div>
     </div>
-    <div class="gs_main_box_2">
+    <div class="gs_main_box_2" (click)="$event.stopPropagation()">
         <div class="gs_tab_btn">
             <ul class="gs_main_box_2_inner">
-                <li class="gs_button _1 select"><span>기업교육</span></li>
-                <li class="gs_button _2"><span>기업자금</span></li>
-                <li class="gs_button _3"><span>기업회생</span></li>
-                <li class="gs_button _4"><span>법인컨설팅</span></li>
+                <li class="gs_button _1 select" #tabBox (click)="selectTab($event)">
+                    기업교육
+                </li>
+                <li class="gs_button _2 sea" #tabBox (click)="selectTab($event)">
+                    기업자금
+                </li>
+                <li class="gs_button _3" #tabBox (click)="selectTab($event)">
+                    기업회생
+                </li>
+                <li class="gs_button _4" #tabBox (click)="selectTab($event)">
+                    법인컨설팅
+                </li>
             </ul>
         </div>
 
@@ -33,10 +41,11 @@
                 </g>
             </svg>
 
-            <li class="gs_box _1 select">
+            <li class="gs_box _1 select" #divsBox>
                 <div class="tab_box_inner">
                     <h1>business<br />education</h1>
                     <div class="gs_tab_con_wrap">
+
                         <span class="gs_tab_con_list">소상공인 업종별 기업교육</span>
                         <span class="gs_tab_con_list">경영에 필요한 핵심실전을 전문가에게 직접 배울수 있다</span>
                         <ul class="gs_tab_con_list_bar">
@@ -61,7 +70,7 @@
                     </div>
                 </div>
             </li>
-            <li class="gs_box _2">
+            <li class="gs_box _2" #divsBox>
                 <div class="tab_box_inner">
                     <h1>business<br />Funding</h1>
                     <div class="gs_tab_con_wrap">
@@ -73,7 +82,7 @@
                     </div>
                 </div>
             </li>
-            <li class="gs_box _3">
+            <li class="gs_box _3" #divsBox>
                 <div class="tab_box_inner">
                     <h1>business<br />rehabilitation</h1>
                     <div class="gs_tab_con_wrap">
@@ -86,7 +95,7 @@
                     </div>
                 </div>
             </li>
-            <li class="gs_box _4">
+            <li class="gs_box _4" #divsBox>
                 <div class="tab_box_inner">
                     <h1>Corporate<br />Consulting</h1>
                     <div class="gs_tab_con_wrap">
@@ -175,4 +184,69 @@
 
     <ngbd-carousel-pause></ngbd-carousel-pause>
 
+    <div class="gs_main_box_5">
+        <div class="gs_contact_curver">　</div>
+        <div class="gs_contact_box">　</div>
+        <div class="gs_main_box_5_inner">
+            <div class="gs_contact_01">
+                <h2>contact us</h2>
+                <p>궁금하신점 있으시면 언제든 문의 남겨주세요.</p>
+            </div>
+            <div class="gs_contact_02">
+                <form action="">
+                    <ul>
+                        <li class="con_Ent">
+                            <span class="gs_contact_title">기업명<span class="im">*</span></span>
+                            <span class="gs_contact_con"><input type="text" id="_Ent" name="_Ent"
+                                    (change)="inputCname($event)" required></span>
+                        </li>
+                        <li class="con_Name">
+                            <span class="gs_contact_title">담당자이름<span class="im">*</span></span>
+                            <span class="gs_contact_con"><input type="text" id="_Name" name="_Name"
+                                    (change)="Mname($event)" required></span>
+                        </li>
+                        <li class="con_Call">
+                            <span class="gs_contact_title">연락처<span class="im">*</span></span>
+                            <span class="gs_contact_con"><input type="text" id="_Call_1" name="_Call_1"
+                                    (change)="inputPhone($event)"><input type="text" id="_Call_2" name="_Call_2"><input
+                                    type="text" id="_Call_3" name="_Call_3"></span>
+                        </li>
+                        <li class="con_Email">
+                            <span class="gs_contact_title">이메일주소<span class="im">*</span></span>
+                            <span class="gs_contact_con"><input type="text" id="_Email" name="_Email"
+                                    (change)="inputEmail($event)"></span>
+                        </li>
+                        <li class="con_Field">
+                            <span class="gs_contact_title">요청분야<span class="im">*</span></span>
+                            <span class="gs_contact_con">
+                                <span>
+                                    <input id="_Field_1" id="coEducation" name="_Field_1" type="checkbox"
+                                        (click)="ischeckBtn($event)">
+                                    <label for="_Field_1">기업교육</label>
+                                </span>
+                                <span>
+                                    <input id="_Field_2" id="coFinance" name="_Field_2" type="checkbox"
+                                        (click)="ischeckBtn($event)">
+                                    <label for="_Field_2">기업자금</label>
+                                </span>
+                                <br />
+                                <span>
+                                    <input id="_Field_3" id="coReconstruct" name="_Field_3" type="checkbox"
+                                        (click)="ischeckBtn($event)">
+                                    <label for="_Field_3">기업회생</label>
+                                </span>
+                                <span>
+                                    <input id="_Field_4" id="coConsultant" name="_Field_4" type="checkbox"
+                                        (click)="ischeckBtn($event)">
+                                    <label for="_Field_4">법인컨설팅</label>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                    <input type="submit" value="문의 남기기">
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-news-pannel></app-news-pannel>
 </div>

@@ -15,10 +15,11 @@ import { NvigationVarComponent } from './component/nvigation-var/nvigation-var.c
 import { FooterComponent } from './component/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CrouselComponent } from './component/crousel/crousel.component';
-import { ModalLoginComponent } from './modal-login/modal-login.component';
+import { ModalLoginComponent } from './component/modal-login/modal-login.component';
 import { JoinusComponent } from './page/joinus/joinus.component';
 import { TOSComponent } from './page/tos/tos.component';
 import { PrivacypolicyComponent } from './page/privacypolicy/privacypolicy.component';
+import { NewsPannelComponent } from './component/news-pannel/news-pannel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { PrivacypolicyComponent } from './page/privacypolicy/privacypolicy.compo
     JoinusComponent,
     TOSComponent,
     PrivacypolicyComponent,
+    NewsPannelComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

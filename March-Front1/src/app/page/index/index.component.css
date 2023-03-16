@@ -94,11 +94,11 @@ body {
   -moz-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.gs_main_box_2 li.gs_button span {
+.gs_main_box_2 li.gs_button {
   font-weight: 500;
   color: #fff;
 }
-.gs_main_box_2 li.gs_button span:after {
+.gs_main_box_2 li.gs_button:after {
   position: absolute;
   top: 0;
   right: 30px;
@@ -361,4 +361,122 @@ ul.gs_tab_con_list_bar li .sub_con_ {
 
 .staticcarouselBox .div {
   margin-top: 10px;
+}
+
+.gs_main_box_5 {
+  position: relative;
+  background-image: url("/img/main_img_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
+  height: 101vh;
+}
+.gs_main_box_5_inner {
+  position: relative;
+  z-index: 40;
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 44;
+  text-align: right;
+}
+.gs_contact_curver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 197, 0, 0.4);
+  z-index: 41;
+}
+.gs_contact_box {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+  background-color: #2f2c37;
+  z-index: 42;
+}
+
+.gs_contact_01 {
+  position: absolute;
+  width: 40%;
+  height: 45%;
+  top: 15%;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  border-top: 3px solid #2f2c37;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 95px 70px;
+}
+
+.gs_contact_02 {
+  position: absolute;
+  width: 60%;
+  right: 0;
+  top: 28%;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  border-top: 3px solid #2f2c37;
+  padding: 85px 70px;
+  box-sizing: border-box;
+}
+.gs_main_box_5 form ul {
+  line-height: 40px;
+  list-style: none;
+}
+.gs_main_box_5 form ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.gs_main_box_5 form ul li .gs_contact_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gs_main_box_5 form ul li .gs_contact_con {
+  display: block;
+  width: 100%;
+}
+.gs_main_box_5 form input[type="text"] {
+  width: calc(69% + 12px);
+  -webkit-width: calc(69% + 12px);
+  -moz-width: calc(69% + 12px);
+  line-height: 26px;
+  padding: 7px 12px;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.gs_main_box_5 form input[type="text"]#_Call_1,
+.gs_main_box_5 form input[type="text"]#_Call_2,
+.gs_main_box_5 form input[type="text"]#_Call_3 {
+  width: 23%;
+  margin-left: 6px;
+}
+
+.gs_main_box_5 form input[type="submit"] {
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+}
+.gs_main_box_5 form ul li.con_Field {
+  text-align: right;
+}
+.gs_main_box_5 form ul li.con_Field .gs_contact_con {
+  display: inline-block;
+  width: calc(69% + 12px);
+  -webkit-width: calc(69% + 12px);
+  -moz-width: calc(69% + 12px);
+  text-align: left;
+}
+.gs_main_box_5 form ul li.con_Field .gs_contact_con span {
+  display: inline-block;
+  width: 33%;
+}
+.gs_main_box_5 form ul li.con_Field .gs_contact_con span label {
+  margin-left: 10px;
 }

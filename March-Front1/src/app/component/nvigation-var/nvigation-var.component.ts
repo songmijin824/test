@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModalLoginComponent } from 'src/app/modal-login/modal-login.component';
+import { ModalLoginComponent } from 'src/app/component/modal-login/modal-login.component';
 
 @Component({
   selector: 'app-nvigation-var',
